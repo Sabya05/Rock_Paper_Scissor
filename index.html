@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>username</title>
+</head>
+<body>
+    <div class="username">
+<div >
+    <h1>GAME ON!</h1>
+<br>
+    <label >NAME:</label> <input type="text"   id="data" placeholder="enter your name..."><br><br>
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" >male
+     
+    <input type="radio" id="female" name="gender" value="female" >female
+    
+    <input type="radio" id="aditya" name="gender" value="aditya" >Aditya
+   
+   
+    
+    <br><br>
+       <br>
+   <button type="button" onclick="saveName()">submit</button>
+
+</div>
+    </div>
+</body>
+<script>
+    const username =document.getElementsByClassName("username");
+const data =document.getElementById("data");
+
+function saveName() {
+    const data = document.getElementById("data").value;
+    localStorage.setItem('username', data);
+
+    const gen = document.querySelector('input[name="gender"]:checked').value;
+
+    localStorage.setItem('gender', gen);
+
+    window.location.href = "index1.html";
+}
+
+
+
+
+
+</script>
+<style>
+.username{
+    background-color: aquamarine;
+   text-align: center;
+    height: 50vh;
+    width: 75vw;
+    margin-top: 13vh;
+}
+body{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+   
+    background-color: chocolate;
+}
+</style>
+</html>
